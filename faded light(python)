@@ -1,0 +1,15 @@
+import pyfirmata as f
+import time
+b=f.Arduino("com3")
+pin=b.get_pin('d:11:p')
+while True:
+ i=0
+ while i<1:
+    pin.write(i)
+    i+=0.001
+    time.sleep(0)
+ j=1
+ while j>0:
+    pin.write(j)
+    j-=0.001
+    time.sleep(0)
