@@ -1,0 +1,16 @@
+import pyfirmata as f
+import time
+b=f.Arduino("com3")
+servo=b.get_pin('d:9:s')
+while True:
+   i=0
+   while i<=180:
+       servo.write(i)
+       i+=1
+       time.sleep(0.015)
+
+   k=180
+   while k>=0:
+       servo.write(k)
+       k-=1
+       time.sleep(0.015)
