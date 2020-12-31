@@ -1,0 +1,16 @@
+import pyfirmata as f
+import time
+board =f.Arduino('COM3') 
+it = f.util.Iterator(board)
+it.start()
+irsensor=board.get_pin('d:9:i')
+while True:
+   irsensor.enable_reporting()
+   k=irsensor.read()
+   print(k)
+ 
+   if k==1:
+       board.digital[13].write(0)
+   else:
+      board.digital[13].write(1)
+
