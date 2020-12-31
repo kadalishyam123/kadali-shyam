@@ -1,0 +1,26 @@
+import tkinter as tk
+import pyfirmata as p
+port="com3"
+board=p.Arduino(port)
+root=tk.Tk()
+root.geometry("200x200")
+root.title("led blink")
+
+def ledon():
+    board.digital[13].write(1)
+    text2=tk.Label(root,text="led on state",fg="red")
+    text2.grid(row=4,column=0)
+
+
+def ledoff():
+    board.digital[13].write(0)
+    t2=tk.Label(root,text=" led off state",fg="red")
+    t2.grid(row=4,column=0)
+
+
+text1=tk.Button(root,text="led on",bg="yellow",fg="green",padx=30,pady=30,command=ledon)
+text1.grid(row=2,column=4)
+      
+t1=tk.Button(root,text="led off",bg="purple",fg="blue",padx=30,pady=30,command=ledoff)
+t1.grid(row=3,column=4)
+input()
