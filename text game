@@ -1,0 +1,222 @@
+from PIL import Image
+import time
+import os
+import random as ran
+name=str(input("What is your name?::-"))
+print("")
+print("HI "+name+".Do you want to play GAME")
+print('''if you want to play GAME please enter 'yes'
+if you dont want to play GAME enter 'no' ''')
+print("")
+opinion=str(input("enter your opinion::"))
+if opinion=='yes':
+    print("")
+    print("------------------------------------------------")
+    print("FIRST GAME")
+    print("------------------------------------------------")
+    print("")
+    print("GAME starts in 10 seconds")
+    print("Enjoy the Game "+name+" :)")
+    print('''INSTRUCTIONS
+             1.you have only three chances
+             2.you have to type any number between 0 to 9
+             3.game is based up on your luck''')
+    for t in range(1,11):
+       time.sleep(1)
+       print(t,end=",")
+elif opinion=='no':
+    print("Good bye "+name+"")
+    quit()
+else:
+    print("what you have written in opinion is can't understand")
+    quit()
+print("\n")
+Secret_Number=ran.randint(0,9)
+chance=0
+print("FISRT GAME START")
+print("")
+while chance<3:
+    Guess=int(input("enter your number:::"))
+    chance+=1
+    if Guess==Secret_Number:
+        win=Image.open(r"C:\Users\shyam\OneDrive\Pictures\Saved Pictures\won.jpg")
+        win.show()
+        print("YOU WON!!!!!!!!!!!!")
+        break
+    else:
+        if chance!=3:
+            print("")
+            print(f"you have {3-chance} chances")
+        else:
+            print(" ")
+            print(f"THE SECRET NUMBER IS  {Secret_Number}")
+            loose=Image.open(r"C:\Users\shyam\OneDrive\Pictures\Saved Pictures\lose.jpg")
+            loose.show()
+            print("YOU LOOSE!!!!!!!!!")
+print("\n")
+input("press enter to enter into the SECOND GAME")
+print("------------------------------------------------")
+print("SECOND GAME")
+print("------------------------------------------------")
+print("")
+print("HI "+name+".Do you want to play SECOND GAME")
+print('''if you want to play GAME please enter 'yes'
+if you dont want to play GAME enter 'no' ''')
+print("\n")
+List=[]
+for L in range(0,10):
+    k=ran.randint(1,100)
+    List.append(k)
+    New_List=list(dict.fromkeys(List))
+Sum=0
+for i in range(0,len(New_List)):
+    Sum=Sum+New_List[i]
+power=pow(Sum,2)/New_List[3]    
+print("")
+opinion=str(input("enter your opinion::"))
+if opinion=='yes':
+    print("")
+    print("------------------------------------------------")
+    print("SECOND GAME START")
+    print("------------------------------------------------")
+    print("")
+    print("GAME starts in 10 seconds")
+    print("Enjoy the Game "+name+" :)")
+    print("")
+    print("Given List")
+    print(New_List)
+    print(f"the clue number is {power}")
+    print("")
+    print('''INSTRUCTION
+                1.See the given list.you have to select the correct number from list(one number)
+                2.you can use that clue
+                3.you don't have any other chances
+                4.I use division/addition/subtraction/squares''')
+    for t in range(1,11):
+       time.sleep(1)
+       print(t,end=",")
+    print("")   
+elif opinion=='no':
+    if Guess==Secret_Number:
+        print('''you played the last is good.
+              your so lucky''')
+        print("Good bye "+name+"")
+        quit()
+    else:
+       print("Good bye "+name+"")
+       quit()
+print("")
+print('''if you want to use calculator type "yes" otherwise type "no"
+if you type yes,the command prompt open and type "calc"''')
+print("")
+calculator=str(input("enter your opinion for calculator::"))
+if calculator=='yes':
+    os.system("cmd")
+else:
+    print("continue your game "+name+"")
+    print("")
+correct_Number=int(input("enter the answer::"))
+if correct_Number==New_List[3]:
+    win=Image.open(r"C:\Users\shyam\OneDrive\Pictures\Saved Pictures\won.jpg")
+    win.show()
+    print("YOU WON!!!!!!!!!!1")
+else:
+     loose=Image.open(r"C:\Users\shyam\OneDrive\Pictures\Saved Pictures\lose.jpg")
+     loose.show()
+     print("YOU LOOSE!!!!!!!!1")
+print("\n")     
+input("press enter to enter into the THIRD GAME")
+print("------------------------------------------------")
+print("THIRD GAME")
+print("------------------------------------------------")
+print("")
+print("HI "+name+".Do you want to play THIRD GAME")
+print('''if you want to play GAME please enter 'yes'
+if you dont want to play GAME enter 'no' ''')
+print("")
+opinion=str(input("enter your opinion::"))
+if opinion=="yes":
+    print("")
+    print("------------------------------------------------")
+    print("SECOND GAME START")
+    print("------------------------------------------------")
+    print("")
+    print("GAME starts in 10 seconds")
+    print("Enjoy the Game "+name+" :)")
+    print("")
+    print('''INSTRUCTION
+                1.See the given two lists
+                2.if you score greater than 2 ,you will win this game
+                3.you don't have any other chances(one time answer)
+                4.use addition''')
+    for t in range(1,11):
+       time.sleep(1)
+       print(t,end=",")
+    print("")   
+elif opinion=='no':
+    if Guess==Secret_Number:
+        print('''you played the last is good.
+              your so lucky''')
+        print("Good bye "+name+"")
+        quit()
+    else:
+       print("Good bye "+name+"")
+       quit()
+    
+List=[]
+for i in range(0,5):
+    k=ran.randint(0,100)
+    p=pow(k,3)
+    List.append(p)
+List1=[]
+for q in range(0,5):
+    m=ran.randint(0,100)
+    j=pow(m,3)
+    List1.append(j)
+Sum=[]
+for d in range(0,len(List1)):
+    h=List[d]+List1[d]
+    Sum.append(h)
+print("list1\n",List)
+print("list2\n",List1)
+print("")
+print('''if you want to use calculator type "yes" otherwise type "no"
+if you type yes,the command prompt open and type "calc"''')
+print("")
+calculator=str(input("enter your opinion for calculator::"))
+if calculator=='yes':
+    os.system("cmd")
+elif calculator=="no":
+    print("continue your game "+name+"")
+print("")
+chance=0
+answer=0
+while chance<5:
+    ans=int(input('enter your number::<>'))
+    chance+=1
+    if ans==Sum[chance-1]:
+        print("correct answer")
+        answer+=1
+    else:
+        print("worng answer")
+print("")        
+print("tally the answers, if you want")        
+print(Sum)        
+print("")        
+if calculator=="yes":
+    score=answer/2
+    print(f"your score(for using calc)={score}")
+elif calculator=="no":
+    print(f" your score={answer}")
+if answer>=3 or score>=1.5:
+    win=Image.open(r"C:\Users\shyam\OneDrive\Pictures\Saved Pictures\won.jpg")
+    win.show()
+else:
+    loose=Image.open(r"C:\Users\shyam\OneDrive\Pictures\Saved Pictures\lose.jpg")
+    loose.show()    
+input()    
+
+
+
+
+    
