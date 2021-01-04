@@ -1,0 +1,12 @@
+#different ways to give inputs
+#variable_name=data_type(input("enter your string"))
+#example1
+number=int(input("enter your number::"))#int data type
+print(number)
+#if you what check type "print(type(number))"
+name=str(input("enter your name::"))#string data type
+print(name)
+#in python we dont have char data type
+number_float=float(input("enter your float_number::"))
+print(number_float)
+
