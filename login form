@@ -10,7 +10,7 @@ def cancel():
     
 def check():
     local=time.asctime(time.localtime(time.time()))
-    wb=op.load_workbook("D:\python\mails\login.xlsx")// create the excel sheet after put the path here
+    wb=op.load_workbook("D:\python\mails\login.xlsx")# create the excel sheet after put the path here
     ws=wb.active
     row1=ws.max_row
     row2=ws.max_row
