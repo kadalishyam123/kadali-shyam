@@ -1,0 +1,61 @@
+# ['append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+
+#use of append
+List1=[]#list
+List1.append(50)#it is used to insert the numbers in list
+print(List1)
+#another way to give list
+List2=list()
+List2.append(100)
+List2.append(200)
+print(List2)
+
+#use of clear
+List3=[100,200,600]
+List3.clear()#it i used to clear the list and print empty list
+print(List3)
+
+#use of copy
+List4=[100,200,600]
+List5=List4.copy()#it is used to copy the list4 and print in list5
+print(List5)
+
+#use of count
+l=[100,100,200,300]
+obj=l.count(100)#it is used to count the repeated number present in the list
+print(obj)
+
+#use of extend
+l1=[100,200,300]
+l1.extend([400,500,600])
+print(l1)
+
+#use of insert
+l2=[100,200,300]
+l2.insert(0,500)#listname.insert(postion,value)(position=position in the list )
+print(l2)
+
+#use of index
+l2=[100,200,300]
+l2.index(200)#listname.index(value)
+print(l2)#it prints the position of value 
+
+#use of pop
+l3=[100,200,300,400]
+l3.pop()#it is used to reomove the last element in the list
+print(l3)
+
+#use of remove
+l4=[10,200,300,400]
+l4.remove(200)#it is used to remove the element in given list
+print(l4)
+
+#use of reverse
+l5=[10,200,300,400]
+l5.reverse()# it is used to reverse the list
+print(l5)#expected ouput([400, 300, 200, 10])
+
+#use of sort
+l6=[5,2,8,9,4,6,0]
+l6.sort()
+print(l6)#expected ouput([0, 2, 4, 5, 6, 8, 9])
