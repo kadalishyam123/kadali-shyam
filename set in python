@@ -1,0 +1,86 @@
+#['add', 'clear', 'copy', 'difference', 'difference_update', 'discard', 'intersection', 'intersection_update'
+#,'isdisjoint', 'issubset', 'issuperset', 'pop', 'remove']
+
+#ways to give set
+set1={}
+set2=set()
+
+#use of add
+set1={10,20,30}
+set1.add(40)#it is used to add that number to the set1 
+print(set1)
+
+#use of clear
+set2={10,20,30}
+set2.clear()#it is used to clear all elements in the set2
+print(set2)
+
+
+#use of difference
+set3={10,20,30,40}
+set4={10,200,300,40}
+c1=set3.difference(set4)#it is used to list the different elements in set
+c2=set4.difference(set3)
+print(c1)#expected output ({20, 30})
+print(c2)#expected output ({200, 300})
+
+#use of difference_update
+set5={10,20,30,40}
+set6={10,200,300,40}
+#set5.difference_update(set6)#it is used to list the different elements in set
+set6.difference_update(set5)
+#print(set5)#expected output ({20, 30})
+print(set6)#expected output ({200, 300})
+
+
+#use of discard
+set7={10,20,30}
+set7.discard(20)#it is used to discard/remove what element you want
+print(set7)
+
+
+
+#use of intersection
+set8={10,20,300}
+set9={10,200,300,40}
+z=set8.intersection(set9)#it is used to print common elements in those two sets
+print(z)
+
+#use of intersection_update
+set10={10,20,300}
+set11={10,200,300,40}
+set10.intersection_update(set11)#it is used to print common elements in those two sets
+print(set10)
+
+#use of isdisjoint
+set12={10,20,30}
+set13={100,200,300,40}
+z=set12.isdisjoint(set13)#both sets should be different then only we get TRUE as output
+print(z)
+
+#use of issubset
+set14={100,200,300}
+set15={100,200,300,40}
+z=set14.issubset(set15)#elements in set14 should be in set15 then only we get TRUE as output
+print(z)
+
+
+#use of issuperset
+set16={100,200,300,400,500,600}
+set17={100,200,300}
+z=set16.issuperset(set17)#elements in set17 should be in set16 then only we get TRUE as output
+print(z)
+
+#use of pop
+set18={100,200,300,500,600}
+set18.pop()
+print(set18)
+
+#use of remove
+set19={10,20,30}
+set19.remove(20)#it is used to discard/remove what element you want
+print(set19)
+
+
+
+
