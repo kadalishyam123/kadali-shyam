@@ -1,0 +1,59 @@
+#dictionaries
+#['clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+
+#using of clear
+d1={"shyam":"python","Gd":"python+c+php+c#+js","Anvesh":"python+c+java"}
+d1.clear()
+print(d1)
+
+#using of copy
+d2={"shyam":"python","Gd":"python+c+php+c#+js","Anvesh":"python+c+java"}
+d3={}
+d3=d2.copy()
+print(d3)
+
+#using of fromkeys
+d4=[1,1,2,5,5,4,8,4,6]
+d5=list(dict.fromkeys(d4))#it is used to remove the iterable numbers from list/dict
+print(d5)
+
+#using of get
+d6={"shyam":"python","Gd":"python+c+php+c#+js","Anvesh":"python+c+java"}
+a=d6.get("shyam")
+print(a)
+
+#using of items
+d7={"shyam":"python","Gd":"python+c+php+c#+js","Anvesh":"python+c+java"}
+c=d7.items()
+print(c)
+
+#using of keys
+d8={"shyam":"python","Gd":"python+c+php+c#+js","Anvesh":"python+c+java"}
+b=d8.keys()
+print(b)
+
+#using of pop
+d9={"shyam":"python","Gd":"python+c+php+c#+js","Anvesh":"python+c+java"}
+d9.pop("Gd")
+print(d9)
+
+#using of popitem
+d10={"shyam":"python","Gd":"python+c+php+c#+js","Anvesh":"python+c+java"}
+d10.popitem()
+print(d10)
+
+#using of setdefault
+d11={"shyam":"python","Gd":"python+c+php+c#+js","Anvesh":"python+c+java"}
+d11.setdefault("sidhu","All languages")
+print(d11)
+
+#using of update
+d12={"shyam":"python","Gd":"python+c+php+c#+js","Anvesh":"python+c+java"}
+d13={"sidhu":"new compiler"}
+d12.update(d13)
+print(d12)
+
+#using of values
+d14={"shyam":"python","Gd":"python+c+php+c#+js","Anvesh":"python+c+java"}
+e=d14.values()
+print(e)
